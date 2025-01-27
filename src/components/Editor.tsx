@@ -13,23 +13,7 @@ const Editor = () => {
         }
         setopenSaveDialog(true)
 
-        // try {
-        //     const res = await fetch('http://localhost:8000/api/files/', {
-        //         method:'POST',
-        //         headers:{
-        //             'Content-Type':'application/json'
-        //         },
-        //         body:JSON.stringify({
-        //             name : 'File1',
-        //             content : content
-        //         })
-        //     })
-
-        //     const response = await res.json();
-        //     console.log(response)
-        // } catch (error) {
-        //     console.log(error)
-        // }
+       
     }
     return (
         <>
