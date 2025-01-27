@@ -7,10 +7,11 @@ import {
     Button,
 } from "@material-tailwind/react";
 import { FileCode } from 'lucide-react'
+import { useNavigate } from 'react-router-dom';
 
 const ShowFiles = () => {
     const [myfiles, setmyfiles] = React.useState<any[]>([])
-
+    const Navigate = useNavigate()
     useEffect(() => {
         const fetchFiles = async () => {
             try {
@@ -41,7 +42,11 @@ const ShowFiles = () => {
                 ) : (
                     <div className='flex flex-wrap fle-row gap-[100px]'>
                        {myfiles.map((file) => (
-                        <div key={file[0]} className='border-2 border-solid  shadow-md p-7 rounded-lg'>
+                        <div key={file[0]} className='border-2 border-solid  shadow-md p-7 rounded-lg hover:shadow-light-blue-300 hover:cursor-pointer'
+                        onClick={()=>{
+                            Navigate(`/getfile/${file[0]}`)
+                        }}
+                        >
                             <FileCode size={200} color="#3f1ee6" />
                             <p className='mt-4 font-sans text-xl'>{file[1].slice(0, file[1].length-25)}</p>
                         </div>
