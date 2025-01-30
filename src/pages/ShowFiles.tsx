@@ -42,7 +42,7 @@ const ShowFiles = () => {
                 ) : (
                     <div className='flex flex-wrap fle-row gap-[100px]'>
                        {myfiles.map((file) => (
-                        <div key={file[0]} className='border-2 border-solid  shadow-md p-7 rounded-lg hover:shadow-light-blue-300 hover:cursor-pointer'
+                        <div key={file[0]} className='border-2 border-solid  shadow-md p-7 rounded-lg hover:shadow-xl hover:shadow-blue-600 hover:cursor-pointer'
                         onClick={()=>{
                             Navigate(`/getfile/${file[0]}`)
                         }}

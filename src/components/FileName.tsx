@@ -44,17 +44,17 @@ export const MessageDialog: React.FC<MyProps> = ({ content }) => {
     return (
         <>
 
-            <Dialog open={open} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} handler={function (value: any): void {
+            <Dialog className="border-2 border-white" open={open} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} handler={function (value: any): void {
                 throw new Error("Function not implemented.");
             }}  >
-                <DialogHeader placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-                    <Typography color="black" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+                <DialogHeader placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} >
+                    <Typography  color="black" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                         Enter file Name
                     </Typography>
                 </DialogHeader>
                 <DialogBody placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} >
                     <form>
-                        <Input value={fileName} onChange={(e) => setfileName(e.target.value)} placeholder="Enter file name" type="text" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} crossOrigin={undefined}></Input>
+                        <Input  value={fileName} onChange={(e) => setfileName(e.target.value)} placeholder="Enter file name" type="text" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} crossOrigin={undefined}></Input>
                     </form>
                 </DialogBody>
                 <DialogFooter className="space-x-2" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>

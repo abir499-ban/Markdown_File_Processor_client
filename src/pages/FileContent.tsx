@@ -31,15 +31,15 @@ const FileContent = () => {
         <div className='p-4 justify-center items-center'>
             {
                 myFile.length == 0 ? (
-                    <p className='text-2xl font-medium'>Loading...</p>
+                    <p className='text-2xl font-medium '>Loading...</p>
                 ) : (
                     <div className='mt-5'>
                         <Typography className='p-4 text-4xl ' variant='lead' placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} >
                                         {myFile[1].slice(0, myFile[1].length-25)}   </Typography>
-                        <Typography variant='paragraph' placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+                        <Typography variant='paragraph'  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                             Created On : {myFile[3].slice(0,10)} </Typography>
 
-                        <textarea className='mt-5 w-full h-screen p-10 rounded-md text-lg font-medium bg-black text-white focus:ring-2 focus:ring-black focus:outline-none resize-none' value={myFile[2]}></textarea>
+                        <textarea className='mt-5 w-full h-screen p-10 rounded-md text-lg font-medium bg-[#0f0c29] text-white focus:ring-2 focus:ring-white focus:outline-none resize-none' value={myFile[2]}></textarea>
                     </div>
                 )
             }

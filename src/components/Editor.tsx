@@ -32,7 +32,7 @@ const Editor = () => {
                 <textarea
                     value={content}
                     onChange={(e) => setcontent(e.target.value)}
-                    className="w-full h-[500px] border-2 border-gray-300 p-4 rounded-md text-lg font-medium bg-[#0f0c29] text-white focus:ring-2 focus:ring-black focus:outline-none resize-none"></textarea>
+                    className="w-full h-[500px] border-2 border-gray-300 p-4 rounded-md text-lg font-medium bg-[#0f0c29] text-white focus:ring-2 focus:ring-white focus:outline-none resize-none"></textarea>
             </div>
         </>
     )
