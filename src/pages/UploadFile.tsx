@@ -4,7 +4,29 @@ import { Upload } from 'lucide-react'
 
 const UploadFile = () => {
     const [file, setFile] = React.useState<File | null>(null);
+    const handleFileUpload = async() => {
+        if(!file){
+            alert('no file selected')
+            return;
+        }
+        const formData = new FormData()
+        formData.append('file', file)
+        try{
+            const res = await fetch('BACKEND_FILE_UPLOAD_API', {
+                method:'POST',
+                headers:{
+                    'Content-Type' : 'application/json'
+                },
+                body:JSON.stringify(formData)
+            })
+            if(!res.ok) throw new Error('error in uploading file')
+            const reponse = await res.json();
+            console.log(reponse)
+        }catch(error){
+            console.log(error)
+        }
 
+    }
 
 
     return (
@@ -28,7 +50,7 @@ const UploadFile = () => {
                 placeholder={undefined}
                 onPointerEnterCapture={undefined}
                 onPointerLeaveCapture={undefined}
-                onClick={()=> console.log(file)}>
+                onClick={handleFileUpload}>
                 Upload</Button>
         </div>
     )
