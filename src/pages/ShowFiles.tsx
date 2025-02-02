@@ -48,7 +48,11 @@ const ShowFiles = () => {
                         }}
                         >
                             <FileCode size={200} color="#3f1ee6" />
-                            <p className='mt-4 font-sans text-xl'>{file[1].slice(0, file[1].length-25)}</p>
+                            {file[1] != 'localfile' ? (
+                                <p className='mt-4 font-sans text-xl'>{file[1].slice(0, file[1].length-25)}</p>
+                            ) : (
+                                <p className='mt-4 font-sans text-xl'>{file[0].slice(0, file[1].length-28)}</p>
+                            )}
                         </div>
                        ))}
                     </div>
